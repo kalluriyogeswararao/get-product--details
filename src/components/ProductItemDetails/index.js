@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+import Loader from 'react-loader-spinner'
 
 import './index.css'
 
@@ -21,6 +22,7 @@ class ProductItemDetails extends Component {
     this.setState({apiStatus: apiStatusConstants.failure})
 
   getProductItemDetails = async () => {
+    this.setState({apiStatus: apiStatusConstants.inProgress})
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -50,6 +52,12 @@ class ProductItemDetails extends Component {
     const {history} = this.props
     history.replace('/products')
   }
+
+  inProgressData = () => (
+    <div className="notfound-container">
+      <Loader type="ThreeDots" color="#0b69ff" height={50} width={50} />
+    </div>
+  )
 
   onProductNotFound = () => (
     <div className="notfound-container">
