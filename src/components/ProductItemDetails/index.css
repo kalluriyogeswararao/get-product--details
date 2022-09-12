@@ -1,0 +1,27 @@
+.error-view-product {
+  width: 600px;
+}
+
+.notfound-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.not-found {
+  font-family: 'roboto';
+  font-size: 40px;
+  color: #171f46;
+}
+
+.shopping-btn {
+  height: 35px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #3b82f6;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
